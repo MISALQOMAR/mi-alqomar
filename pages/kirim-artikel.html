@@ -1,0 +1,106 @@
+<!-- FILE: pages/kirim-artikel.html -->
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kirim Artikel - MIS Al-Qomar</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="../img/logo.png" alt="Logo Sekolah" class="logo-img" />
+        <span>MIS Al-Qomar</span>
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </header>
+
+    <section class="form-section animate-on-scroll">
+      <div class="container">
+        <h2>Kirim Artikel Kegiatan</h2>
+        <p>
+          Form ini digunakan oleh guru untuk mengirim artikel kegiatan siswa.
+        </p>
+        <form
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+          enctype="multipart/form-data"
+          class="ppdb-form"
+          onsubmit="return showSuccess(event)"
+        >
+          <div class="form-grid">
+            <input
+              type="text"
+              name="nama_guru"
+              placeholder="Nama Guru"
+              required
+            />
+            <input
+              type="text"
+              name="judul_artikel"
+              placeholder="Judul Artikel"
+              required
+            />
+            <textarea
+              name="isi_artikel"
+              placeholder="Isi Artikel"
+              rows="6"
+              required
+            ></textarea>
+            <input type="file" name="gambar" accept="image/*" />
+          </div>
+
+          <button type="submit" class="btn-cta">
+            <i class="fas fa-paper-plane"></i> Kirim Artikel
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      function showSuccess(e) {
+        e.preventDefault();
+        const form = e.target;
+
+        fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              Swal.fire({
+                icon: "success",
+                title: "Artikel berhasil dikirim!",
+                showConfirmButton: false,
+                timer: 2000,
+              });
+              form.reset();
+            } else {
+              Swal.fire({
+                icon: "error",
+                title: "Terjadi kesalahan",
+              });
+            }
+          })
+          .catch((error) => {
+            Swal.fire({
+              icon: "error",
+              title: "Gagal mengirim. Coba lagi nanti.",
+            });
+          });
+
+        return false;
+      }
+    </script>
+
+    <script src="../js/scroll-anim.js"></script>
+  </body>
+</html>

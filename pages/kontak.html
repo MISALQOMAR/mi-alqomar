@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak Kami</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="../img/logo.png" alt="Logo Sekolah" class="logo-img" />
+        <span>MIS Al-Qomar</span>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li>
+            <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+
+          <li class="dropdown">
+            <a href="#"
+              ><i class="fas fa-building"></i> Tentang Kami
+              <i class="fas fa-caret-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="profil.html"
+                  ><i class="fas fa-user-graduate"></i> Profil Madrasah</a
+                >
+              </li>
+              <li>
+                <a href="struktur.html"
+                  ><i class="fas fa-sitemap"></i> Struktur Organisasi</a
+                >
+              </li>
+              <li>
+                <a href="visi-misi.html"
+                  ><i class="fas fa-bullseye"></i> Visi dan Misi</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#"
+              ><i class="fas fa-book"></i> Program
+              <i class="fas fa-caret-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="program-unggulan.html"
+                  ><i class="fas fa-star"></i> Program Unggulan</a
+                >
+              </li>
+              <li>
+                <a href="ekstrakurikuler.html"
+                  ><i class="fas fa-dumbbell"></i> Ekstrakurikuler</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#"
+              ><i class="fas fa-user-plus"></i> PPDB
+              <i class="fas fa-caret-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="ppdb-alur.html"
+                  ><i class="fas fa-route"></i> Alur Pendaftaran & SK</a
+                >
+              </li>
+              <li>
+                <a href="formulir.html"
+                  ><i class="fas fa-file-alt"></i> Formulir Pendaftaran</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="artikel.html"><i class="fas fa-newspaper"></i> Artikel</a>
+          </li>
+
+          <li>
+            <a href="galeri.html"><i class="fas fa-image"></i> Galeri</a>
+          </li>
+
+          <li>
+            <a href="kontak.html"><i class="fas fa-phone-alt"></i> Kontak</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="section-title">
+      <div class="container">
+        <h2><i class="fas fa-phone-alt"></i> Kontak Kami</h2>
+        <p>Silakan hubungi kami melalui kontak atau formulir di bawah ini</p>
+      </div>
+    </section>
+
+    <section class="kontak-section animate-on-scroll">
+      <div class="container kontak-grid">
+        <!-- KONTAK INFO -->
+        <div class="kontak-info">
+          <h3><i class="fas fa-map-marker-alt"></i> Alamat</h3>
+          <p>
+            Jl. Daeng Menambon Rt.02 / Rw. 01, Desa Kuala Secapah, Kec. Mempawah
+            Hilir, Kab. Mempawah, Provinsi Kalimantan Barat, Indonesia
+          </p>
+
+          <h3><i class="fab fa-whatsapp"></i> WhatsApp</h3>
+          <p>
+            <a href="https://wa.me/6281234567890" target="_blank"
+              >+62 857-5013-3615</a
+            >
+          </p>
+
+          <h3><i class="fas fa-envelope"></i> Email</h3>
+          <p><a href="mailto:sdncerdas@email.com">misalqoamr@email.com</a></p>
+
+          <h3><i class="fas fa-share-alt"></i> Sosial Media</h3>
+          <div class="sosial-icons">
+            <a href="https://www.instagram.com/mis_alqomar" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/mis_al-qomar_kuala_secapah"
+              target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="https://www.youtube.com/@al-qomarmedia" target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- FORMULIR PESAN -->
+        <div class="kontak-form">
+          <form action="#" method="post">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="5" required></textarea>
+
+            <button type="submit" class="btn-kirim">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-info">
+          <h4>MIS Al-Qomar</h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Jl. Daeng Menambon Rt.02 /
+            Rw.01, Kuala Secapah
+          </p>
+          <p><i class="fas fa-envelope"></i> misalqomar@gmail.com</p>
+          <p>
+            <a
+              href="https://wa.me/6285750133615"
+              target="_blank"
+              class="wa-link"
+            >
+              <i class="fab fa-whatsapp"></i> 0857-5013-3615
+            </a>
+          </p>
+        </div>
+        <div class="footer-sosmed">
+          <h4>Ikuti Kami</h4>
+          <a href="https://www.instagram.com/mis_alqomar" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/mis_al-qomar_kuala_secapah"
+            target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.youtube.com/@al-qomarmedia" target="_blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 MIS Al-Qomar. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/menu-toggle.js"></script>
+  </body>
+</html>

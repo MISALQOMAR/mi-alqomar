@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="../img/logo.png" alt="Logo Sekolah" class="logo-img" />
+        <span>MIS Al-Qomar</span>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li>
+            <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+
+          <li class="dropdown">
+            <a href="#"
+              ><i class="fas fa-building"></i> Tentang Kami
+              <i class="fas fa-caret-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="profil.html"
+                  ><i class="fas fa-user-graduate"></i> Profil Madrasah</a
+                >
+              </li>
+              <li>
+                <a href="struktur.html"
+                  ><i class="fas fa-sitemap"></i> Struktur Organisasi</a
+                >
+              </li>
+              <li>
+                <a href="visi-misi.html"
+                  ><i class="fas fa-bullseye"></i> Visi dan Misi</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#"
+              ><i class="fas fa-book"></i> Program
+              <i class="fas fa-caret-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="program-unggulan.html"
+                  ><i class="fas fa-star"></i> Program Unggulan</a
+                >
+              </li>
+              <li>
+                <a href="ekstrakurikuler.html"
+                  ><i class="fas fa-dumbbell"></i> Ekstrakurikuler</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#"
+              ><i class="fas fa-user-plus"></i> PPDB
+              <i class="fas fa-caret-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="ppdb-alur.html"
+                  ><i class="fas fa-route"></i> Alur Pendaftaran & SK</a
+                >
+              </li>
+              <li>
+                <a href="formulir.html"
+                  ><i class="fas fa-file-alt"></i> Formulir Pendaftaran</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="artikel.html"><i class="fas fa-newspaper"></i> Artikel</a>
+          </li>
+
+          <li>
+            <a href="galeri.html"><i class="fas fa-image"></i> Galeri</a>
+          </li>
+
+          <li>
+            <a href="kontak.html"><i class="fas fa-phone-alt"></i> Kontak</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="section-title">
+      <div class="container">
+        <h2><i class="fas fa-file-alt"></i> Formulir Pendaftaran</h2>
+        <p>Silakan isi data berikut dengan lengkap dan benar</p>
+      </div>
+    </section>
+
+    <section class="form-section animate-on-scroll">
+      <div class="container">
+        <form
+          action="https://formspree.io/f/movlvnwr"
+          method="POST"
+          class="ppdb-form"
+          id="ppdb-form"
+        >
+          <!-- DATA DIRI -->
+          <!-- DATA DIRI -->
+          <h3>Data Diri</h3>
+          <div class="form-grid">
+            <input
+              type="text"
+              name="nama_lengkap"
+              placeholder="Nama Lengkap"
+              required
+            />
+            <input
+              type="text"
+              name="tempat_lahir"
+              placeholder="Tempat Lahir"
+              required
+            />
+            <input type="date" name="tanggal_lahir" required />
+            <input
+              type="number"
+              name="jumlah_saudara"
+              placeholder="Jumlah Saudara"
+              required
+            />
+            <input
+              type="number"
+              name="anak_ke"
+              placeholder="Anak Ke-"
+              required
+            />
+            <input
+              type="text"
+              name="nisn"
+              pattern="[0-9]*"
+              inputmode="numeric"
+              oninvalid="this.setCustomValidity('NISN hanya boleh diisi dengan angka')"
+              oninput="this.setCustomValidity('')"
+              placeholder="Masukkan NISN (opsional)"
+            />
+            <input
+              type="text"
+              name="nik"
+              pattern="[0-9]{16}"
+              maxlength="16"
+              inputmode="numeric"
+              required
+              oninvalid="this.setCustomValidity('NIK harus diisi dengan 16 digit angka')"
+              oninput="this.setCustomValidity('')"
+              placeholder="Masukkan NIK (16 digit)"
+            />
+          </div>
+
+          <!-- DATA ORANG TUA -->
+          <h3>Data Orang Tua</h3>
+          <div class="form-grid">
+            <!-- AYAH -->
+            <input
+              type="text"
+              name="nama_ayah"
+              placeholder="Nama Ayah"
+              required
+            />
+            <input
+              type="text"
+              name="nik_ayah"
+              pattern="[0-9]{16}"
+              maxlength="16"
+              inputmode="numeric"
+              required
+              oninvalid="this.setCustomValidity('NIK Ayah harus 16 digit angka')"
+              oninput="this.setCustomValidity('')"
+              placeholder="Masukkan NIK Ayah (16 digit)"
+            />
+            <input
+              type="text"
+              name="tempat_lahir_ayah"
+              placeholder="Tempat Lahir Ayah"
+              required
+            />
+            <input type="date" name="tanggal_lahir_ayah" required />
+
+            <!-- IBU -->
+            <input
+              type="text"
+              name="nama_ibu"
+              placeholder="Nama Ibu"
+              required
+            />
+            <input
+              type="text"
+              name="nik_ibu"
+              pattern="[0-9]{16}"
+              maxlength="16"
+              inputmode="numeric"
+              required
+              oninvalid="this.setCustomValidity('NIK Ibu harus 16 digit angka')"
+              oninput="this.setCustomValidity('')"
+              placeholder="Masukkan NIK Ibu (16 digit)"
+            />
+            <input
+              type="text"
+              name="tempat_lahir_ibu"
+              placeholder="Tempat Lahir Ibu"
+              required
+            />
+            <input type="date" name="tanggal_lahir_ibu" required />
+          </div>
+
+          <!-- ALAMAT -->
+          <h3>Alamat</h3>
+          <div class="form-grid">
+            <input type="text" name="jalan" placeholder="Jalan" required />
+            <input type="text" name="rt_rw" placeholder="RT / RW" required />
+            <input type="text" name="desa" placeholder="Desa" required />
+            <input
+              type="text"
+              name="kecamatan"
+              placeholder="Kecamatan"
+              required
+            />
+            <input
+              type="text"
+              name="kabupaten"
+              placeholder="Kabupaten"
+              required
+            />
+            <input
+              type="text"
+              name="provinsi"
+              placeholder="Provinsi"
+              required
+            />
+            <input
+              type="text"
+              name="kode_pos"
+              placeholder="Kode Pos"
+              required
+            />
+          </div>
+
+          <!-- KONTAK -->
+          <h3>Kontak</h3>
+          <div class="form-grid">
+            <input
+              type="tel"
+              name="no_hp"
+              pattern="[0-9]{10,15}"
+              inputmode="numeric"
+              required
+              oninvalid="this.setCustomValidity('No HP harus terdiri dari 10–15 digit angka')"
+              oninput="this.setCustomValidity('')"
+              placeholder="Masukkan No. HP (10–15 digit)"
+            />
+            <input type="email" name="email" placeholder="Email (Opsional)" />
+          </div>
+
+          <!-- TAMBAHAN -->
+          <h3>Tambahan (jika siswa pindahan)</h3>
+          <div class="form-grid">
+            <input
+              type="text"
+              name="asal_sekolah"
+              placeholder="Asal Sekolah (Opsional)"
+            />
+            <input type="text" name="kelas" placeholder="Kelas (Opsional)" />
+            <input
+              type="text"
+              name="alasan_pindah"
+              placeholder="Alasan Pindah (Opsional)"
+            />
+          </div>
+
+          <button type="submit" class="btn-cta">
+            <i class="fas fa-paper-plane"></i> Kirim Formulir
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-info">
+          <h4>MIS Al-Qomar</h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Jl. Daeng Menambon Rt.02 /
+            Rw.01, Kuala Secapah
+          </p>
+          <p><i class="fas fa-envelope"></i> misalqomar@gmail.com</p>
+          <p>
+            <a
+              href="https://wa.me/6285750133615"
+              target="_blank"
+              class="wa-link"
+            >
+              <i class="fab fa-whatsapp"></i> 0857-5013-3615
+            </a>
+          </p>
+        </div>
+        <div class="footer-sosmed">
+          <h4>Ikuti Kami</h4>
+          <a href="https://www.instagram.com/mis_alqomar" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/mis_al-qomar_kuala_secapah"
+            target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.youtube.com/@al-qomarmedia" target="_blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 MIS Al-Qomar. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/menu-toggle.js"></script>
+    <script>
+      const form = document.getElementById("ppdb-form");
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const data = new FormData(form);
+
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (response.ok) {
+          form.reset();
+          Swal.fire({
+            title: "Berhasil!",
+            text: "Formulir pendaftaran sudah terkirim.",
+            icon: "success",
+            confirmButtonText: "Oke",
+          });
+        } else {
+          Swal.fire({
+            title: "Oops!",
+            text: "Terjadi kesalahan saat mengirim. Silakan coba lagi.",
+            icon: "error",
+            confirmButtonText: "Coba Lagi",
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
